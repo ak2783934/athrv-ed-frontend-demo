@@ -1,0 +1,181 @@
+html {
+  width: 100%;
+}
+body {
+  background-color: pink;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.home {
+  width: 100%;
+}
+.nav-bar {
+  width: 100%;
+  background-color: #c4c4c4;
+  top: 0px;
+  height: 50px;
+  font-size: 30px;
+  text-decoration: none;
+  margin-top: 0px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+.arthv-ed {
+  margin-left: 10%;
+}
+.arthv-ed a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-login {
+  margin-left: 65%;
+  margin-right: 0px;
+}
+.nav-login a {
+  text-decoration: none;
+  color: black;
+}
+.nav-logout a {
+  text-decoration: none;
+  color: black;
+}
+.home-h1 {
+  text-align: center;
+}
+
+.home-container {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+}
+.titles-home {
+  display: flex;
+  flex-direction: row;
+}
+
+.titles-home :nth-child(2) {
+  width: 45%;
+}
+.titles-home :nth-child(1) {
+  margin-left: 10px;
+  width: 45%;
+}
+.home-events {
+  margin-top: 30px;
+}
+.home-events > div {
+  background-color: #8c6868;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.home-events > div :nth-child(2) {
+  /* margin-left: 40%; */
+  width: 45%;
+}
+.home-events > div :nth-child(1) {
+  /* margin-left: 10px; */
+  width: 45%;
+}
+.login h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.login-form {
+  width: 50%;
+  margin: 10% auto;
+}
+.login-from form {
+  width: 70%;
+}
+div input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 0;
+}
+form button {
+  margin: 0px;
+  margin-top: 20px;
+  width: 100%;
+}
+.register-form {
+  width: 50%;
+  margin: 10% auto;
+}
+.registration h1 {
+  text-align: center;
+  font-size: 40px;
+}
+.add-events h1 {
+  text-align: center;
+}
+div form {
+  width: 30%;
+  margin: 10px auto;
+}
+.all-events {
+  width: 80%;
+  margin: 10px auto;
+}
+.titles-home div {
+  display: flex;
+  flex-direction: row;
+}
+.home-events div {
+  display: flex;
+  flex-direction: row;
+}
+.people-registered h1 {
+  text-align: center;
+}
+.people-list {
+  background-color: #c4c4c4;
+  width: 80%;
+  margin: 10px auto;
+}
+.people-list-title {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+
+.people-list-title div {
+  width: 20%;
+}
+
+.people-list-title :nth-child(1) {
+  margin-left: 10px;
+}
+
+.people-list-items {
+  margin-top: 15px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+}
+.people-list-items div {
+  width: 20%;
+}
+
+.people-list-items :nth-child(1) {
+  margin-left: 10px;
+}
+
+form h5 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
