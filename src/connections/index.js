@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const url = "http://localhost:5000";
-// const url = "https://athrv-ed-demo.herokuapp.com";
+// const url = "http://localhost:5000";
+const url = "https://athrv-ed-demo.herokuapp.com";
 
 export async function getevents() {
   console.log("Preload triggered at index");
