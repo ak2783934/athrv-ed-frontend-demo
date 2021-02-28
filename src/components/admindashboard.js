@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./navbar";
-import { getevents, postevent } from "../connections/index";
+import { getevents, postevent, eventedit } from "../connections/index";
 import { Link } from "react-router-dom";
 
 export default function AdminDashboard() {
@@ -92,9 +92,33 @@ export default function AdminDashboard() {
               <div key={index}>
                 <div>{event.name}</div>
                 <div>{event.date.slice(0, 10)}</div>
-                <Link to={"/peoplesregistered/" + event.eid}>
-                  View Participants
-                </Link>
+                {event.isactive && (
+                  <button
+                    onClick={() => {
+                      console.log("Disable clicked");
+                      eventedit(event);
+                      window.location.reload();
+                    }}
+                  >
+                    Disable
+                  </button>
+                )}
+                {!event.isactive && (
+                  <button
+                    onClick={() => {
+                      console.log("Enable clicked");
+                      eventedit(event);
+                      window.location.reload();
+                    }}
+                  >
+                    Enable
+                  </button>
+                )}
+                <button>
+                  <Link to={"/peoplesregistered/" + event.eid}>
+                    View Participants
+                  </Link>
+                </button>
               </div>
             );
           })}

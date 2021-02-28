@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-// const url = "http://localhost:5000";
-const url = "https://athrv-ed-demo.herokuapp.com";
+const url = "http://localhost:5000";
+// const url = "https://athrv-ed-demo.herokuapp.com";
 
 export async function getevents() {
   console.log("Preload triggered at index");
@@ -15,12 +15,35 @@ export async function getevents() {
     },
   })
     .then((response) => {
-      console.log("events recieved, From axios");
-      console.log(response.data);
+      // console.log("events recieved, From axios");
+      // console.log(response.data);
       return response.data;
     })
     .catch((err) => {
-      console.log("events not recieved, error in axios" + err);
+      // console.log("events not recieved, error in axios" + err);
+      return false;
+    });
+}
+
+export async function eventedit(event) {
+  // console.log("edit event is clicked");
+  return await axios({
+    url: `${url}/eventedit/${isAuthenticated().user.uid}/${event.eid}`,
+    method: "PUT",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      mode: "no-cors",
+      Accept: "application/json",
+      Authorization: `Bearer ${isAuthenticated().token}`,
+    },
+  })
+    .then((response) => {
+      // console.log("view toggled !, From axios");
+      // console.log(response.data);
+      return response.data;
+    })
+    .catch((err) => {
+      // console.log("view couldn't be toggled, error in axios" + err);
       return false;
     });
 }
@@ -37,8 +60,8 @@ export async function getlist(event) {
     },
   })
     .then((response) => {
-      console.log("got all peoples !, From axios");
-      console.log(response.data);
+      // console.log("got all peoples !, From axios");
+      // console.log(response.data);
       return response.data;
     })
     .catch((err) => {
@@ -67,12 +90,12 @@ export async function register(user) {
     },
   })
     .then((response) => {
-      console.log("registration done!, From axios");
-      console.log(response.data);
+      // console.log("registration done!, From axios");
+      // console.log(response.data);
       return response.data;
     })
     .catch((err) => {
-      console.log("registration not done, error in axios" + err);
+      // console.log("registration not done, error in axios" + err);
       return false;
     });
 }
@@ -93,13 +116,13 @@ export async function signin(user) {
     },
   })
     .then((response) => {
-      console.log("data from axios and signin successfull ");
-      console.log(response.data);
+      // console.log("data from axios and signin successfull ");
+      // console.log(response.data);
       return response.data;
     })
     .catch((err) => {
-      console.log(user.password + " " + user.email);
-      console.log("Error in axios {email and password doesn't match}");
+      // console.log(user.password + " " + user.email);
+      // console.log("Error in axios {email and password doesn't match}");
       return false;
     });
 }
@@ -137,12 +160,12 @@ export async function postevent(event) {
     },
   })
     .then((response) => {
-      console.log("new event posted!, From axios");
-      console.log(response.data);
+      // console.log("new event posted!, From axios");
+      // console.log(response.data);
       return response.data;
     })
     .catch((err) => {
-      console.log("Couldn't post, error in axios" + err);
+      // console.log("Couldn't post, error in axios" + err);
       return false;
     });
 }

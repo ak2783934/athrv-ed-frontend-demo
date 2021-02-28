@@ -42,11 +42,13 @@ export default function Home() {
         </div>
         <div className={"home-events"}>
           {events.map((event, index) => {
-            return (
-              <div key={index}>
-                <Event event={event} />
-              </div>
-            );
+            if (event.isactive) {
+              return (
+                <div key={index}>
+                  <Event event={event} />
+                </div>
+              );
+            }
           })}
         </div>
       </div>
